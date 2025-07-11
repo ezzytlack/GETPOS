@@ -1,2 +1,4 @@
 # GETPOS
 A POS system for small businesses
+
+CONTROLS - when you first enter the site clcik login near the recipt box, the default login as an admin is admin, the password is 1234. from here yo are now logged in as an admin and has access to all tool on the site, to create other users click add user and follow the popups. while an admin you have access to several features. The first control is creating new items, in the top left click add item and follow the steps, to edit other items you must press certain key combos. to change the name of an item hold control and click the item you want to change, (all items are in the top left in different categories) shift to change the price, tab to change the stock amount, control alt to remove an item. other controls can be accessed through various buttons near the recipt.
