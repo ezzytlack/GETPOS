@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GetPos</title>
+  <script src="script.js" defer></script>
+  <style>
+    .tab-btn, .item-btn { font-family: sans-serif; cursor: pointer; }
+    .active-tab { background: #444; color: white; }
+  </style>
+</head>
+<body style="background:#292929; color:white; font-family:sans-serif;">
+
+<h1 style="position:absolute;top:10px;left:100px;">GET POS</h1>
+
+<!-- Tabs -->
+<div style="position:absolute;top:70px;left:100px;">
+  <input class="tab-btn" type="button" value="Food"    data-group="food">
+  <input class="tab-btn" type="button" value="Drinks"  data-group="drinks">
+  <input class="tab-btn" type="button" value="Sides"   data-group="sides">
+  <input class="tab-btn" type="button" value="Dessert" data-group="dessert">
+</div>
+
+<!-- Items grid -->
+<div id="itemsArea"
+     style="position:absolute;top:120px;left:100px;width:640px;display:flex;flex-wrap:wrap;">
+  <input class="item-btn" type="button" data-group="food"    data-name="Burger" data-price="5.99" data-stock="10" style="width:100px;height:75px;margin:5px;">
+  <input class="item-btn" type="button" data-group="drinks"  data-name="Cola"   data-price="1.99" data-stock="20" style="width:100px;height:75px;margin:5px;">
+</div>
+
+<!-- Add item button -->
+<input id="addItemBtn" type="button" value="Add New Item"
+       style="position:absolute;top:70px;left:330px;width:150px;">
+
+<!-- Receipt & totals -->
+<div id="receiptBox"  style="position:absolute;top:60px;left:1500px;width:300px;height:200px;
+                             background:#111;color:#0f0;border:3px solid #fff;border-radius:10px;
+                             overflow-y:auto;padding:10px;font-family:monospace;"></div>
+<div id="totalDisplay" style="position:absolute;top:300px;left:1500px;font-size:20px;"></div>
+
+<!-- Register total -->
+<div style="position:absolute;top:50px;left:1000px;width:300px;text-align:center;">Register Total</div>
+<input id="registerTotalInput" type="text" readonly
+       style="position:absolute;top:75px;left:1000px;width:300px;font-size:20px;text-align:center;">
+
+<!-- Receipt controls -->
+<input type="button" value="Undo"             onclick="undoLastItem()"    style="position:absolute;top:140px;left:1000px;width:145px;">
+<input type="button" value="Refund"           onclick="refundItem()"      style="position:absolute;top:140px;left:1160px;width:145px;">
+<input type="button" value="Reset Receipt"    onclick="resetReceipt()"    style="position:absolute;top:190px;left:1000px;width:145px;">
+<input type="button" value="Complete"         onclick="completeReceipt()" style="position:absolute;top:190px;left:1160px;width:145px;">
+
+<!-- Discounts -->
+<input type="button" value="Discount All"     onclick="discountWholeReceipt()" style="position:absolute;top:240px;left:1000px;width:145px;">
+<input type="button" value="Discount One"     onclick="discountOneItem()"      style="position:absolute;top:240px;left:1160px;width:145px;">
+
+<!-- Login / admin -->
+<input type="button" value="Login"     onclick="loginUser()"        style="position:absolute;top:290px;left:1000px;width:145px;">
+<input type="button" value="Logout"    onclick="logoutUser()"       style="position:absolute;top:290px;left:1160px;width:145px;">
+<input type="button" value="Add User"  onclick="addNewUser()"       style="position:absolute;top:340px;left:1000px;width:145px;">
+<input type="button" value="Change Tax"onclick="changeTaxRate()"    style="position:absolute;top:340px;left:1160px;width:145px;">
+
+<!-- History -->
+<input type="button" value="View History" onclick="viewHistory()"
+       style="position:absolute;top:390px;left:1000px;width:300px;">
+
+<!-- bring in JS last -->
+<script src="script.js" defer></script>
