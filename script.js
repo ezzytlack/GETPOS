@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 let receiptLines = [];
 let taxRate = 7.5;
 let currentUser = null;
